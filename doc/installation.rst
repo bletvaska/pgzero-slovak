@@ -1,11 +1,11 @@
 Inštalácia knižnice Pygame Zero
 ===============================
 
-Included with Mu
+Dodávané s Mu
 ----------------
 
-The `Mu IDE <https://codewith.mu>`_, which is aimed at beginners, includes a
-version of Pygame Zero.
+`Mu IDE <https://codewith.mu>`_, ktoré sa zameriava na začiatočníkov, je 
+dodávané s knižnicou Pygame Zero.
 
 You will need to `switch mode <https://codewith.mu/en/tutorials/1.0/modes>`_
 into Pygame Zero mode to use it. Then type in a program and
@@ -14,15 +14,15 @@ with Pygame Zero.
 
 .. note::
 
-    The version of Mu included with Pygame Zero may not be the latest version!
-    You can find which version is installed by running this code in Mu::
+    Verzia dodávanej knižnice Pygame Zero v editore Mu však nemusí byť najnovšia!
+    Verziu knižnice môžete zistiť spustením tohto kódu v editore Mu::
 
         import pgzero
         print(pgzero.__version__)
 
 
-Stand-alone installation
-------------------------
+Samostatná inštalácia
+----------------------
 
 Najprv potrebujete mať nainštalovaný **Python 3**! Ten je obyčajne predinštalovaný, 
 ak používate **Linux** alebo **Raspberry Pi**. Pre iné systémy si ho môžete stiahnuť
@@ -68,13 +68,13 @@ Do okna terminálu zadajte
    sudo pip install pgzero
 
 
-Some Linux systems call it ``pip3``; if the above command printed something
-like ``sudo: pip: command not found`` then try::
+Niektoré linuxové systémy však používajú ``pip3``; ak predchádzajúci príkaz vypíše niečo ako
+``sudo: pip: príkaz nenájdený`` potom zadajte::
 
     sudo pip3 install pgzero
 
-Sometimes pip is not installed and needs to be installed. If so try this before
-running the above commands again::
+Občas pip nie je nainštalovaný, takže ho treba doinštalovať. Ak je to váš prípad, 
+zadajte najprv nasledujúci príkaz pred opätovným spustením predchádzajúcich::
 
 
     sudo python3 -m ensurepip
@@ -82,7 +82,7 @@ running the above commands again::
 
 .. _install-repl:
 
-Installing the REPL
+Inštalácia REPL
 -------------------
 
 :doc:`Pygame Zero's REPL <repl>` is an optional feature. This can be enabled
