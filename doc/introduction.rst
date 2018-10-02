@@ -1,27 +1,26 @@
-Introduction to Pygame Zero
+Úvod do Pygame Zero
 ===========================
 
 .. highlight:: python
     :linenothreshold: 5
 
-Creating a window
+Vytvorenie okna 
 -----------------
 
-First, create an empty file called ``intro.py``.
+Najprv vytvorte prázdny súbor s názvom ``intro.py``.
 
-Verify that this runs and creates a blank window by running ::
+Uistite sa, že sa po spustení nasledujúceho príkazu vytvorí prázdne okno ::
 
     pgzrun intro.py
 
-Everything in Pygame Zero is optional; a blank file is a valid Pygame Zero
-script!
+Všetko v knižnici Pygame Zero je voliteľné; prázdny súbor je valídnym skriptom Pygame Zero!
 
-You can quit the game by clicking on the window's close button or by pressing
-``Ctrl-Q`` (``⌘-Q`` on Mac). If the game stops responding for any reason, you
-may need to terminate it by pressing ``Ctrl-C`` in your Terminal window.
+Hru môžete ukončiť kliknutím na ikonu pre zatvorenie okna alebo stlačením kláves
+``Ctrl-Q`` (``⌘-Q`` na Mac-u). Ak z nejakého dôvodu prestane hra reagovať, môžete 
+ju ukončiť stlačením ``Ctrl-C`` v okne vášho terminálu.
 
 
-Drawing a background
+Vykreslenie pozadia
 --------------------
 
 Next, let's add a :func:`draw` function and set window dimensions. Pygame Zero
@@ -52,8 +51,8 @@ and see what colors you can create.
 Let's set up a sprite that we can animate.
 
 
-Draw a sprite
--------------
+Kreslíme sprite
+---------------
 
 Before we can draw anything, we'll need to save an alien sprite to use. You can
 right click on this one and save it ("Save Image As..." or similar).
@@ -112,8 +111,8 @@ The ``alien.draw()`` method draws the sprite to the screen at its current
 position.
 
 
-Moving the alien
-----------------
+Rozpohybovanie mimozemšťana
+---------------------------
 
 Let's set the alien off-screen; change the ``alien.pos`` line to read::
 
@@ -139,8 +138,8 @@ The ``draw()`` function draws the current position of the alien while the ``upda
 moving on the screen.
 
 
-Handling clicks
----------------
+Ošetrenie kliknutí
+------------------
 
 Let's make the game do something when you click on the alien. To do this we
 need to define a function called :func:`on_mouse_down`. Add this to the source
@@ -170,7 +169,7 @@ or::
 
 
 
-Sounds and images
+Zvuky a obrázky
 -----------------
 
 Now let's make the alien appear hurt. Save these files:
@@ -269,7 +268,7 @@ click.
 a float number to show this but feel free to use both to see the difference and effects the different values have.
 
 
-Summary
+Zhrnutie
 -------
 
 We've seen how to load and draw sprites, play sounds, handle input events, and

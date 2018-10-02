@@ -6,10 +6,9 @@
 Welcome to Pygame Zero
 ======================
 
-Pygame Zero is for creating games without boilerplate.
+Pygame Zero je na tvorbu hier bez boilerplate.
 
-It is intended for use in education, so that teachers can teach basic
-programming without needing to explain the Pygame API or write an event loop.
+Knižnica je určená na použitie vo vzdelávaní, aby učitelia mohli vyučovať základy programovania bez nutnosti vysvetľovať Pygame API alebo písať hernú slučku.
 
 
 Courses
@@ -34,8 +33,8 @@ Reference
     hooks
     builtins
 
-User Guide
-----------
+Používateľská príručka
+----------------------
 
 .. toctree::
     :maxdepth: 2
@@ -47,7 +46,7 @@ User Guide
     changelog
 
 
-Stickers by |Sticker Mule|
+Nálepky od |Sticker Mule|
 --------------------------
 
 .. |Sticker Mule| image:: _static/sticker-mule.svg
