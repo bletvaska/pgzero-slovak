@@ -1,5 +1,5 @@
-Installing Pygame Zero
-======================
+Inštalácia knižnice Pygame Zero
+===============================
 
 Included with Mu
 ----------------
@@ -24,15 +24,15 @@ with Pygame Zero.
 Stand-alone installation
 ------------------------
 
-First of all, you need **Python 3** installed! This is usually installed
-already if you are using **Linux** or a **Raspberry Pi**. You can download it
-from `python.org <https://www.python.org/>` on other systems.
+Najprv potrebujete mať nainštalovaný **Python 3**! Ten je obyčajne predinštalovaný, 
+ak používate **Linux** alebo **Raspberry Pi**. Pre iné systémy si ho môžete stiahnuť
+zo stránky `python.org <https://www.python.org/>`.
 
 
 Windows
 '''''''
 
-To install Pygame Zero, use **pip**. At a `command prompt`__, type
+Pre nainštalovanie knižnice Pygame Zero použite **pip**. Do `príkazového riadku`__ zadajte
 
 .. __: https://www.lifewire.com/how-to-open-command-prompt-2618089
 
@@ -44,7 +44,7 @@ To install Pygame Zero, use **pip**. At a `command prompt`__, type
 Mac
 '''
 
-In a Terminal window, type
+Do okna terminálu zadajte
 
 ::
 
@@ -61,7 +61,7 @@ order to be able to install pygame. For a list of available Wheels, please visit
 Linux
 '''''
 
-In a terminal window, type
+Do okna terminálu zadajte
 
 ::
 
