@@ -54,14 +54,14 @@ Poďme nastaviť sprite, ktorý môžeme animovať.
 Kreslíme sprite
 ---------------
 
-Before we can draw anything, we'll need to save an alien sprite to use. You can
-right click on this one and save it ("Save Image As..." or similar).
+Ešte predtým, ako čokoľvek nakreslíme, potrebujeme stiahnuť sprite s mimozemšťanom.
+Kliknite na neho pravým tlačidlom a uložte ho ("Uložit obrázok ako..." alebo niečo podobné).
 
 .. image:: _static/alien.png
 
-(This sprite has a transparency (or "alpha") channel, which is great for games!
-But it's designed for a dark background, so you may not be able to see the
-alien's space helmet until it is shown in the game).
+(Tento sprite je priesvitný (má "alpha" kanál), čo je pre hry skvelé!
+Je ale navrhnutý pre tmavé pozadie, takže pokiaľ sa v hre nezobrazí, 
+nemusíte vidieť mimozemšťanovu prilbu).
 
 .. tip::
 
@@ -84,8 +84,8 @@ If you've done that, your project should look like this:
     │   └── alien.png
     └── intro.py
 
-``images/`` is the standard directory that Pygame Zero will look in to find
-your images.
+``images/`` je štandardný priečinok, ktorý bude Pygame Zero používať na hľadanie
+vašich obrázkov.
 
 There's a built-in class called :class:`Actor` that you can use to represent a
 graphic to be drawn to the screen.
