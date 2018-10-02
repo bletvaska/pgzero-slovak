@@ -11,8 +11,8 @@ Pygame Zero je na tvorbu hier bez boilerplate.
 Knižnica je určená na použitie vo vzdelávaní, aby učitelia mohli vyučovať základy programovania bez nutnosti vysvetľovať Pygame API alebo písať hernú slučku.
 
 
-Courses
--------
+Návody
+------
 
 .. toctree::
     :maxdepth: 2

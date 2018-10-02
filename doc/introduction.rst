@@ -23,10 +23,10 @@ ju ukončiť stlačením ``Ctrl-C`` v okne vášho terminálu.
 Vykreslenie pozadia
 --------------------
 
-Next, let's add a :func:`draw` function and set window dimensions. Pygame Zero
-will call this function whenever it needs to paint the screen.
+Teraz pridáme funkciu :func:`draw` a nastavíme rozmery okna. Pygame Zero
+bude túto funkciu volať zakaždým, keď bude potrebovať kresliť na obrazovku.
 
-In ``intro.py``, add the following::
+Do súboru ``intro.py`` pridajte tieto riadky::
 
     WIDTH = 300
     HEIGHT = 300
@@ -34,21 +34,21 @@ In ``intro.py``, add the following::
     def draw():
         screen.fill((128, 0, 0))
 
-Re-run ``pgzrun intro.py`` and the screen should now be a reddish square!
+Znovu spustite príkaz ``pgzrun intro.py`` čím sa obrazovka zmení na červený štvorec!
 
-What is this code doing?
+Ako tento kód pracuje?
 
-``WIDTH`` and ``HEIGHT`` control the width and height of your window. The code
-sets the window size to be 300 pixels in each dimension.
+Premenné ``WIDTH`` a ``HEIGHT`` nastavujú šírku a výšku okna. Tento kód teda nastaví 
+šírku aj výšku okna na 300 pixelov.
 
-``screen`` is a built-in that represents the window display. It has a
-:ref:`range of methods for drawing sprites and shapes <screen>`. The
-``screen.fill()`` method call is filling the screen with a solid colour,
-specified as a ``(red, green, blue)`` colour tuple. ``(128, 0, 0)`` will be a
-medium-dark red. Try changing these values with numbers between 0 and 255
-and see what colors you can create.
+``screen`` je zabudovaný objekt, ktorý reprezentuje plochu okna. Obsahuje 
+:ref:`množstvo metód pre vykreslovanie sprite-ov a tvarov <screen>`. Zavolaním metódy
+``screen.fill()`` dôjde k vyfarbeniu obrazovky jednou farbou, ktorá je definovaná
+ako trojica ``(červená, zelená, modrá)``. ``(128, 0, 0)`` bude stredne
+tmavočervená. Vyskúšajte si meniť hodnoty týchto čísiel v rozsahu od 0 do 255
+a sledujte, aké farby dokážete vytvoriť.
 
-Let's set up a sprite that we can animate.
+Poďme nastaviť sprite, ktorý môžeme animovať.
 
 
 Kreslíme sprite
@@ -111,8 +111,8 @@ The ``alien.draw()`` method draws the sprite to the screen at its current
 position.
 
 
-Rozpohybovanie mimozemšťana
----------------------------
+Hýbeme s mimozemšťanom
+----------------------
 
 Let's set the alien off-screen; change the ``alien.pos`` line to read::
 
