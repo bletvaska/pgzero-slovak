@@ -7,10 +7,10 @@ Dodávané s Mu
 `Mu IDE <https://codewith.mu>`_, ktoré sa zameriava na začiatočníkov, je 
 dodávané s knižnicou Pygame Zero.
 
-You will need to `switch mode <https://codewith.mu/en/tutorials/1.0/modes>`_
-into Pygame Zero mode to use it. Then type in a program and
-`use the Play button <https://codewith.mu/en/tutorials/1.0/pgzero>`_ to run it
-with Pygame Zero.
+Ak budete chcieť knižnicu použiť, budete musieť `zmeniť režim <https://codewith.mu/en/tutorials/1.0/modes>`_
+na režim Pygame Zero. Potom napíšte svoj program a 
+`použitím tlačidla Play <https://codewith.mu/en/tutorials/1.0/pgzero>`_ ho 
+spustíte s knižnicou Pygame Zero.
 
 .. note::
 
@@ -51,9 +51,9 @@ Do okna terminálu zadajte
    pip install pgzero
 
 
-Note that there are currently no Wheels for Pygame that support python 3.4 for Mac,
-so you may need to you will need to upgrade Python to >=3.6 (or use python 2.7) in
-order to be able to install pygame. For a list of available Wheels, please visit
+Všimnite si, že zatiaľ nie sú k dispozícii žiadne Wheels pre knižnicu Pygame s podporou Python 3.4 pre Mac,
+takže budete musieť aktualizovať Python na verziu >=3.6 (alebo použite Python 2.7), 
+aby ste mohli knižnicu Pygame nainštalovať. Pre získanie zoznamu dostupných Wheels navštívte stránku
 `pyPI_`
 
 .. _pyPI: https://pypi.org/project/Pygame/#files
