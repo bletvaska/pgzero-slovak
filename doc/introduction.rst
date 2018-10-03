@@ -254,16 +254,20 @@ nikde nevolá. Ale zmeňme funkciu ``set_alien_hurt()`` tak, aby používala obj
         sounds.eep.play()
         clock.schedule_unique(set_alien_normal, 0.5)
 
-``clock.schedule_unique()`` will cause ``set_alien_normal()`` to be called
-after ``0.5`` second. ``schedule_unique()`` also prevents the same function
-being scheduled more than once, such as if you click very rapidly.
+Metóda ``clock.schedule_unique()`` spôsobí, že funkcia ``set_alien_normal()`` 
+sa zavolá po uplynutí ``0.5`` sekundy. Metóda ``clock.schedule_unique()`` 
+taktiež zabráni tomu, aby rovnaká funkcia bola naplánovaná viackrát, ako napríklad
+keď budete klikať veľmi rýchlo.
 
-Try it, and you'll see the alien revert to normal after 0.5 second. Try clicking
+Vyskúšajte to a uvidíte, že sa mimozemšťan vráti do normálu po uplynutí 0.5 sekundy. 
+Skúste rýchlo klikať a overte, že sa mimozemšťan nevráti po 0.5 sekunde od posledného 
+kliknutia.
 rapidly and verify that the alien doesn't revert until 0.5 second after the last
 click.
 
-``clock.schedule_unique()`` accepts both integers and float numbers for the time interval. in the tutorial we are using
-a float number to show this but feel free to use both to see the difference and effects the different values have.
+``clock.schedule_unique()`` akceptuje pre zadanie časového intervalu ako celé 
+tak aj desatinné čísla. V tomto návode sme použili desatinné čísla, aby to bolo vidieť,
+ale neváhajte použiť obe, aby ste videli rozdiel a dopad, ktorý majú rozličné hodnoty.
 
 
 Zhrnutie
@@ -272,9 +276,9 @@ Zhrnutie
 Ukázali sme si, ako nahrať a zobraziť sprity, prehrávať zvuky, ošetriť vstupné udalosti
 a ako sa používajú zabudované hodiny.
 
-You might like to expand the game to keep score, or make the alien move more
-erratically.
+Môžete hru rozšíriť o skóre alebo môžete upraviť mimozemšťana tak, aby sa pohyboval 
+viac náhodne.
 
-There are lots more features built in to make Pygame Zero easy to use. Check
-out the :doc:`built in objects <builtins>` to learn how to use the rest of the
-API.
+Knižnica Pygame Zero obsahuje množstvo ďalších zabudovaných vlastností, ktoré
+robia prácu s ňou jednoduchou. Ak sa chcete naučiť aj zvyšné API, navštívte 
+stránku o :doc:`zabudovaných objektoch <builtins>`.
