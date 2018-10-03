@@ -638,32 +638,33 @@ premenné a nie konštanty.
 Animácie
 ----------
 
-You can animate most things in pygame using the builtin ``animate()``. For
-example, to move an :ref:`Actor <actor>` from its current position on the
-screen to the position ``(100, 100)``::
+V knižnici pygame môžete animovať väčšinu vecí pomocou zabudovanej funkcie 
+``animate()``. Napríklad, ak chcete presunúť :ref:`Actor <actor>` z jedho aktuálnej
+polohy na obrazovke na pozíciu ``(100, 100)``::
 
     animate(alien, pos=(100, 100))
 
 .. function:: animate(object, tween='linear', duration=1, on_finished=None, **targets)
 
+    
     Animate the attributes on object from their current value to that
     specified in the targets keywords.
 
     :param tween: The type of *tweening* to use.
-    :param duration: The duration of the animation, in seconds.
-    :param on_finished: Function called when the animation finishes.
-    :param targets: The target values for the attributes to animate.
+    :param duration: Trvanie animácie v sekundách.
+    :param on_finished: Funkcia, ktorá má byť zavolaná po skončení animácie.
+    :param targets: Cieľové hodnoty atribútov pre animáciu.
 
-The tween argument can be one of the following:
+Hodnota ``tween`` argumentu môže byť jedna z nasledujúcich:
 
 +--------------------+------------------------------------------------------+
-| 'linear'           | Animate at a constant speed from start to finish     |
+| 'linear'           | Animácia konštantnou rýchlosťou zo začiatku do cieľa |
 +--------------------+------------------------------------------------------+
-| 'accelerate'       | Start slower and accelerate to finish                |
+| 'accelerate'       | Začne pomaly a zrýchľuje až do konca                 |
 +--------------------+------------------------------------------------------+
-| 'decelerate'       | Start fast and decelerate to finish                  |
+| 'decelerate'       | Začne rýchlo a spomaľuje až do cieľa                 |
 +--------------------+------------------------------------------------------+
-| 'accel_decel'      | Accelerate to mid point and decelerate to finish     |
+| 'accel_decel'      | Zrýchľuje do stredu a spomaľuje do konca             |
 +--------------------+------------------------------------------------------+
 | 'in_elastic'       | Give a little wobble at the end                      |
 +--------------------+------------------------------------------------------+
@@ -678,16 +679,15 @@ The tween argument can be one of the following:
 | 'bounce_start_end' | Bounce at both ends                                  |
 +--------------------+------------------------------------------------------+
 
-The ``animate()`` function returns an ``Animation`` instance:
+Funkcia ``animate()`` vrátiu inštanciu triedy ``Animation``:
 
 .. class:: Animation
 
     .. method:: stop(complete=False)
 
-        Stop the animation, optionally completing the transition to the final
-        property values.
+        Zastaví animáciu, voliteľne dokončí prechod do cieľových hodnôt vlastností.
 
-        :param complete: Set the animated attribute to the target value.
+        :param complete: Nastaví atribút animácie na jeho konečnú hodnotu.
 
     .. attribute:: running
 
