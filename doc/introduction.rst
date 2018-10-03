@@ -55,7 +55,7 @@ Kreslíme sprite
 ---------------
 
 Ešte predtým, ako čokoľvek nakreslíme, potrebujeme stiahnuť sprite s mimozemšťanom.
-Kliknite na neho pravým tlačidlom a uložte ho ("Uložit obrázok ako..." alebo niečo podobné).
+Kliknite na neho pravým tlačidlom a uložte ho (Vyberte "Uložit obrázok ako..." alebo niečo podobné).
 
 .. image:: _static/alien.png
 
@@ -65,17 +65,17 @@ nemusíte vidieť mimozemšťanovu prilbu).
 
 .. tip::
 
-    You can find lots of free sprites, including this one, on `kenney.nl
-    <https://kenney.nl/assets?q=2d>`_. This one comes from the
+    Množstvo voľných spritov, vrátane tohto, môžete nájsť na stránke `kenney.nl
+    <https://kenney.nl/assets?q=2d>`_. Tento sprite pochádza z balíka 
     `Platformer Art Deluxe pack
     <https://kenney.nl/assets/platformer-art-deluxe>`_.
 
-You need to save the file in the right place so that Pygame Zero can find it.
-Create a directory called ``images`` and save the image into it as
-``alien.png``. Both of those must be lower case. Pygame Zero will complain
-otherwise, to alert you to a potential cross-platform compatibility pitfall.
+Súbor potrebujete uložiť na správne miesto, aby ho knižnica Pygame Zero vedela nájsť.
+Vytvorte priečinok s názvom ``images`` a obrázok do neho ulože pod názvom ``alien.png``.
+Názvy oboch musia byť malými písmenami. V opačnom prípade sa bude knižnica sťažovať,
+aby vás upozornila na potenciálny problém v multiplatformnej kompatibilite.
 
-If you've done that, your project should look like this:
+Ak ste to urobili, váš projekt by mal vyzerať takto:
 
 .. code-block:: none
 
@@ -87,10 +87,10 @@ If you've done that, your project should look like this:
 ``images/`` je štandardný priečinok, ktorý bude Pygame Zero používať na hľadanie
 vašich obrázkov.
 
-There's a built-in class called :class:`Actor` that you can use to represent a
-graphic to be drawn to the screen.
+V knižnici sa nachádza zabudovaná trieda s názvom :class:`Actor`, ktorú môžete použiť
+na reprezentovanie grafiky, ktorá sa má vykresliť na obrazovku.
 
-Let's define one now. Change the ``intro.py`` file to read::
+Poďme jednu vytvoriť. Upravte súbor ``intro.py`` takto::
 
     alien = Actor('alien')
     alien.pos = 100, 56
@@ -102,13 +102,12 @@ Let's define one now. Change the ``intro.py`` file to read::
         screen.clear()
         alien.draw()
 
-Your alien should now be appearing on screen! By passing the string ``'alien'``
-to the ``Actor`` class, it automatically loads the sprite, and has attributes
-like positioning and dimensions. This allows us to set the ``HEIGHT`` of
-the window based on the height of the alien.
+Váš mimozemšťan by sa mal teraz zobraziť na obrazovke! Odovzdaním reťazca ``'alien'``
+do konštruktora triedy ``Actor`` sa automaticky nahrá sprite a má k dispozícii 
+atribúty ako pozícia a rozmer. To nám umožní nastaviť ``HEIGHT`` okna na 
+základe výšky mimozemšťana.
 
-The ``alien.draw()`` method draws the sprite to the screen at its current
-position.
+Metóda ``alien.draw()`` vykreslí sprite na obrazovku na jeho aktuálnu pozíciu.
 
 
 Hýbeme s mimozemšťanom
