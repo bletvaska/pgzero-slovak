@@ -102,8 +102,8 @@ For example, you can draw a box with::
 .. _`Pygame Rect`: https://www.pygame.org/docs/ref/rect.html
 
 
-Resource Loading
-----------------
+Nahrávanie zdrojov
+------------------
 
 The ``images`` and ``sounds`` objects can be used to load images and sounds
 from files stored in the ``images`` and ``sounds`` subdirectories respectively.
@@ -126,8 +126,8 @@ These will not work::
     my-cat.png
     sam's dog.png
 
-Images
-''''''
+Obrázky
+'''''''
 
 Pygame Zero can load images in ``.png``, ``.gif``, and ``.jpg`` formats. PNG is
 recommended: it will allow high quality images with transparency.
@@ -202,7 +202,7 @@ to query the size of the image in pixels:
             Rect((0, 0), image.get_size())
 
 
-Sounds
+Zvuky
 ''''''
 
 Pygame Zero can load sounds in ``.wav`` and ``.ogg`` formats. WAV is great for
@@ -254,7 +254,7 @@ music is loaded.
 
 .. _music:
 
-Music
+Hudba
 -----
 
 .. versionadded:: 1.1
@@ -434,14 +434,15 @@ will have to keep a reference to the object.
 
 .. _actor:
 
-Actors
+Aktéri
 ------
 
-Once you have many images moving around in a game it can be convenient to have
-something that holds in one place the image and where it is on screen. We'll
-call each moving image on screen an ``Actor``. You can create an actor by supplying
-at least an image name (from the images folder above). To draw the alien talked
-about above::
+Keď sa vám začne v hre pohybovať veľa obrázkov, bolo by kratické mať k dispozícii 
+niečo, čo drží na jednom mieste obrázok spolu s pozíciou, kde sa má vykresliť.
+Každý pohybujúci sa obrázok na obrazovke budeme volať aktér a bude reprezentovaný
+triedou ``Actor``. Pre vytvorenie aktéra vám bude stačiť zadať názov obrázku 
+(z priečinku s obrázkami, ako bolo uvedené vyššie). Vykresliť mimozemšťana, 
+o ktorom sme hovorili vyššie, môžete takto::
 
     alien = Actor('alien', (50, 50))
 
@@ -449,7 +450,7 @@ about above::
         screen.clear()
         alien.draw()
 
-You can move the actor around by setting its pos attribute in an update::
+Pohybovať s aktérom môžete zmenou jeho atribútu ``pos`` vo funkcii ``update()``::
 
     def update():
         if keyboard.left:
@@ -457,14 +458,14 @@ You can move the actor around by setting its pos attribute in an update::
         elif keyboard.right:
             alien.x += 1
 
-And you may change the image used to draw the actor by setting its image
-attribute to some new image name::
+Zmeniť jeho obrázok, ktorý reprezentuje aktéra, môžete nastavením jeho atribútu
+``image`` na nejaký nový názov obrázku::
 
     alien.image = 'alien_hurt'
 
-Actors have all the same attributes and methods as :ref:`Rect <rect>`,
-including methods like `.colliderect()`__ which can be used to test whether
-two actors have collided.
+Aktéri majú všetky metódy a atribúty rovnaké ako :ref:`Rect <rect>`,
+vrátane metód ako `.colliderect()`__, ktorá sa zistí, či dvaja aktéri nie sú 
+v kolízii.
 
 .. __: https://www.pygame.org/docs/ref/rect.html#pygame.Rect.colliderect
 
