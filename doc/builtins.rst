@@ -437,7 +437,7 @@ will have to keep a reference to the object.
 Aktéri
 ------
 
-Keď sa vám začne v hre pohybovať veľa obrázkov, bolo by kratické mať k dispozícii 
+Keď sa vám začne v hre pohybovať veľa obrázkov, bolo by praktické mať k dispozícii 
 niečo, čo drží na jednom mieste obrázok spolu s pozíciou, kde sa má vykresliť.
 Každý pohybujúci sa obrázok na obrazovke budeme volať aktér a bude reprezentovaný
 triedou ``Actor``. Pre vytvorenie aktéra vám bude stačiť zadať názov obrázku 
@@ -470,25 +470,25 @@ v kolízii.
 .. __: https://www.pygame.org/docs/ref/rect.html#pygame.Rect.colliderect
 
 
-Positioning Actors
-''''''''''''''''''
+Umiestňovanie aktérov
+'''''''''''''''''''''
 
-If you assign a new value to one of the position attributes then the actor will
-be moved. For example::
+Ak do niektorého pozičného atribútu priradíte novú hodnotu, aktér bude presunutý.
+Napríklad::
 
     alien.right = WIDTH
 
-will position the alien so its right-hand side is set to ``WIDTH``.
+presunie mimozemšťana tak, že jeho pravý okraj bude nastavený na ``WIDTH``.
 
-Similarly, you can also set the initial position of the actor in the
-constructor, by passing one of these as a keyword argument: ``pos``,
+Podobne môžete nastaviť počiatočnú polohu aktéra odovzdaním do konštruktora 
+jedného z týchto kľúčových slov ako keyword argument: ``pos``,
 ``topleft``, ``topright``, ``bottomleft``, ``bottomright``, ``midtop``,
-``midleft``, ``midright``, ``midbottom`` or ``center``:
+``midleft``, ``midright``, ``midbottom`` alebo ``center``:
 
 .. image:: _static/actor/anchor_points.png
 
-This can be done during creation or by assigning a pair of x, y co-ordinates.
-For example::
+Toto môže byť zabezpečené počas vytvárania alebo alebo priradením páru súradníc 
+x, y. Napríklad::
 
     WIDTH = 200
     HEIGHT = 200
@@ -501,12 +501,12 @@ For example::
 
 .. image:: _static/actor/alien_center.png
 
-Changing ``center=(100, 100)`` to ``midbottom=(100, 200)`` gives you:
+Zmenou ``center=(100, 100)`` na ``midbottom=(100, 200)`` dostanete:
 
 .. image:: _static/actor/alien_midbottom.png
 
-If you don't specify an initial position, the actor will initially be
-positioned in the top-left corner (equivalent to ``topleft=(0, 0)``).
+Ak nezadáte počiatočnú pozíciu, aktér bude umiestnený v ľavom hornom rohu
+(ekvivalent zápisu ``topleft=(0, 0)``).
 
 .. _anchor:
 
