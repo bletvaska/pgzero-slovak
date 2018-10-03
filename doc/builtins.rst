@@ -534,29 +534,30 @@ Otáčanie
 
 .. versionadded:: 1.2
 
-The ``.angle`` attribute of an Actor controls the rotation of the sprite, in
-degrees, anticlockwise (counterclockwise).
+Atribút aktéra ``.angle`` riadi otáčanie sprite-u v stupňoch proti smeru hodinových ručičiek.
 
-The centre of rotation is the Actor's :ref:`anchor point <anchor>`.
+Stredom otáčania je aktérov :ref:`anchor point <anchor>`.
 
-Note that this will change the ``width`` and ``height`` of the Actor.
+Pozor však na to, že dôjde k zmene atribútov ``width`` a ``height`` aktéra.
 
-For example, to make an asteroid sprite spinning slowly anticlockwise in
-space::
+Ako príklad môže byť pomalé otáčanie sprite-u asteroidu vo vesmíre proti smeru 
+hodinových ručičiek::
 
     asteroid = Actor('asteroid', center=(300, 300))
 
     def update():
         asteroid.angle += 1
 
-To have it spin clockwise, we'd change ``update()`` to::
+Aby sa začal otáčať v smere hodinových ručičiek, zmeníme funkciu ``update()`` takto::
 
     def update():
         asteroid.angle -= 1
 
-As a different example, we could make an actor ``ship`` always face the mouse
-pointer. Because :meth:`~Actor.angle_to()` returns 0 for "right", the sprite we
-use for "ship" should face right::
+Ako ďalší príklad urobíme aktéra ``ship``, ktorý sa vždy otočí smerom ku kurzoru myši.
+
+
+Keďže :meth:`~Actor.angle_to()` vráti hodnotu 0 pre "pravú stranu", sprite,
+ktorý použijeme pre "ship" by mal byť natočený doprava::
 
     ship = Actor('ship')
 
@@ -564,10 +565,10 @@ use for "ship" should face right::
         ship.angle = ship.angle_to(pos)
 
 .. image:: _static/rotation.svg
-    :alt: Diagram showing how to set up sprites for rotation with angle_to()
+    :alt: Diagram ukazujúci ako nastaviť otočeniu sprite-u pomocou ``angle_to()``
 
-Remember that angles loop round, so 0 degrees == 360 degrees == 720 degrees.
-Likewise -180 degrees == 180 degrees.
+Nezabudnite, že uhly loop round, takže 0 stupňov == 360 stupňov == 720 stupňov.
+Taktiež -180 stupňov == 180 stupňov.
 
 
 Distance and angle to
