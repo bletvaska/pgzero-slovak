@@ -513,24 +513,23 @@ Ak nezadáte počiatočnú pozíciu, aktér bude umiestnený v ľavom hornom roh
 Anchor point
 ''''''''''''
 
-Actors have an "anchor position", which is a convenient way to position the
-actor in the scene. By default, the anchor position is the center, so the
-``.pos`` attribute refers to the center of the actor (and so do the ``x`` and
-``y`` coordinates). It's common to want to set the anchor point to another
-part of the sprite (perhaps the feet - so that you can easily set the Actor to
-be "standing on" something)::
+Aktéri majú "anchor position", čo je praktický spôsob, ako umiestniť aktéra do scény.
+Predvolene je tento bod v strede, takže atribút ``.pos`` referuje 
+na stred aktéra (rovnako aj súradnice ``x`` a ``y``). 
+Je bežné chcieť zmeniť anchor point na inú časť sprite-u (možno na nohu, aby bolo
+jednoduché nastaviť aktéra tak, že na niečom "stojí")::
 
     alien = Actor('alien', anchor=('center', 'bottom'))
     spaceship = Actor('spaceship', anchor=(10, 50))
 
-``anchor`` is specified as a tuple ``(xanchor, yanchor)``, where the values can
-be floats or the strings ``left``, ``center``/``middle``, ``right``, ``top`` or
-``bottom`` as appropriate.
+``anchor`` je špecifikovaná ako entica ``(xanchor, yanchor)``, kde hodnoty môžu 
+byť desatinné čísla alebo reťazce ``left``, ``center``/``middle``, ``right``, ``top`` alebo
+``bottom`` podľa potreby.
 
 
 .. _rotation:
 
-Rotation
+Otáčanie
 ''''''''
 
 .. versionadded:: 1.2
