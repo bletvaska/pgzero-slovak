@@ -571,32 +571,33 @@ Nezabudnite, že uhly loop round, takže 0 stupňov == 360 stupňov == 720 stup�
 Taktiež -180 stupňov == 180 stupňov.
 
 
-Distance and angle to
-'''''''''''''''''''''
+Vzdialenosť a uhol medzi aktérmi
+''''''''''''''''''''''''''''''''
 
-Actors have convenient methods for calculating their distance or angle to other
-Actors or ``(x, y)`` coordinate pairs.
+Aktéri majú prktické metódy pre výpočet ich vzdialenosti alebo uhlu k ďalšiemu
+aktérovi alebo voči páru súradníc ``(x, y)``.
 
 .. method:: Actor.distance_to(target)
 
-    Return the distance from this actor's position to target, in pixels.
+    Vráti vzdialenosť od pozície tohto aktéra k cieľu v pixeloch.
 
 
 .. method:: Actor.angle_to(target)
 
-    Return the angle from this actor's position to target, in degrees.
+    Vráti uhol medzi pozíciou tohto aktéra a cieľom v stupňoch.
 
+    Metóda vráti číslo v rozsahu od -180 do 180 stupňov. Vpravo je 0 stupňov
+    a uhol rastie proti smeru hodinových ručičiek.
     This will return a number between -180 and 180 degrees. Right is 0 degrees
-    and the angles increase going anticlockwise.
 
-    Therefore:
+    Takže:
 
-    * Left is 180 degrees.
-    * Up is 90 degrees.
-    * Down is -90 degrees.
+    * Vľavo je 180 stupňov.
+    * Hore je 90 stupňov.
+    * Dolu je -90 stupňov.
 
 
-The Keyboard
+Klávesnica
 ------------
 
 You probably noticed that we used the ``keyboard`` in the above code.
