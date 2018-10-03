@@ -1,7 +1,8 @@
-Built-in Objects
+Zabudované objekty
 ================
 
-Pygame Zero provides useful built-in objects to help you make games easily.
+Pygame Zero poskytuje užitočné zabudované objekty, ktoré vám pomôžu vytvárať 
+vaše hry jednoduchšie.
 
 
 .. _screen:
@@ -14,7 +15,7 @@ Screen
 
     ptext
 
-The ``screen`` object represents your game screen.
+Objekt ``screen`` reprezentuje vašu hernú obrazovku.
 
 It is a thin wrapper around a Pygame surface that allows you to easily
 draw images to the screen ("blit" them).
@@ -23,62 +24,62 @@ draw images to the screen ("blit" them).
 
     .. attribute:: surface
 
-        The raw `Pygame surface`_ that represents the screen buffer. You can
-        use this for advanced graphics operations.
+        Referencia na `Pygame surface`_, ktorý reprezentuje buffer obrazovky.
+        Môžete ho použiť na pokročilé grafické úlohy.
 
         .. _`Pygame surface`: https://www.pygame.org/docs/ref/surface.html
 
     .. method:: clear()
 
-        Reset the screen to black.
+        Resetuje obrazovku na čierno.
 
     .. method:: fill((red, green, blue))
 
-        Fill the screen with a solid color.
+        Vyplní obrazovku farbou. 
 
     .. method:: blit(image, (left, top))
 
-        Draw the image to the screen at the given position.
+        Vykreslí obrázok na obrazovku na zadanú pozíciu.
 
-        ``blit()`` accepts either a Surface or a string as its ``image``
-        parameter. If ``image`` is a ``str`` then the named image will be
-        loaded from the ``images/`` directory.
+        ``blit()`` akceptuje buď ``Surface`` alebo reťazec ako jej parameter 
+        ``image``. Ak je ``image`` reťazec (``str``), tak sa nahrá obrázok s týmto 
+        názvom z priečinku ``images/``.
 
     .. method:: draw.line(start, end, (r, g, b))
 
-        Draw a line from start to end.
+        Nakreslí čiaru od počiatočného bodu (``start``) po koncový (``end``).
 
     .. method:: draw.circle(pos, radius, (r, g, b))
 
-        Draw the outline of a circle.
+        Nakreslí kružnicu.
 
     .. method:: draw.filled_circle(pos, radius, (r, g, b))
 
-        Draw a filled circle.
+        Nakreslí kruh.
 
     .. method:: draw.rect(rect, (r, g, b))
 
-        Draw the outline of a rectangle.
+        Nakreslí obrys obdĺžnika.
 
-        Takes a :ref:`Rect <rect>`.
+        Očakáva :ref:`Rect <rect>`.
 
     .. method:: draw.filled_rect(rect, (r, g, b))
 
-        Draw a filled rectangle.
+        Nakreslí vyplnený obdĺžnik.
 
     .. method:: draw.text(text, [pos], **kwargs)
 
-        Draw text.
+        Nakreslí text.
 
-        There's an extremely rich API for positioning and formatting text; see
-        :doc:`ptext` for full details.
+        K dispozícii je bohaté API pre umiestňovanie a formátovanie textu; pre 
+        zobrazenie kompletnej dokumentácie navštívte :doc:`ptext`.
 
     .. method:: draw.textbox(text, rect, **kwargs)
 
-        Draw text, sized to fill the given :ref:`Rect`.
+        Nakreslí text, ktorý vyplní daný :ref:`Rect`.
 
-        There's an extremely rich API for formatting text; see
-        :doc:`ptext` for full details.
+        K dispozícii je bohaté API pre formátovanie textu; pre zobrazenie kompletnej 
+        dokumentácie navštívte :doc:`ptext`.
 
 .. _rect:
 

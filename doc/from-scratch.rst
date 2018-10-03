@@ -1,5 +1,5 @@
-Migrating from Scratch
-======================
+Prechod z nástroja Scratch
+==========================
 
 This tutorial will compare an implementation of Flappy Bird written in Scratch
 with one written in Pygame Zero. The Scratch and Pygame Zero programs are
@@ -111,7 +111,7 @@ animation by one step, so we just need to a call to ``update_walls()``::
       update_walls()
 
 
-The Bird
+Vták
 --------
 
 The patterns described above for how Scratch logic translates to Python code
@@ -227,16 +227,16 @@ The biggest differences between Scratch and Pygame Zero are these:
   instead of ``dead = 0`` as in Scratch.
 
 
-Summary
+Zhrnutie
 -------
 
-Many of the concepts available in Scratch can be translated directly into
-Pygame Zero.
+Množstvo konceptov dostupných v nástroji Scratch môže byť preložených priamo
+do knižnice Pygame Zero.
 
-Here are some comparisons:
+Tu je niekoľko porovnaní:
 
 +----------------------------+--------------------------------------------+
-| In Scratch                 | In Pygame Zero                             |
+| V nástroji Scratch         | V knižnici  Pygame Zero                    |
 +============================+============================================+
 | ``change y by 1`` (up)     | ``bird.y -= 1``                            |
 +----------------------------+--------------------------------------------+
