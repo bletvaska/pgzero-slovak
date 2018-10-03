@@ -600,41 +600,42 @@ aktérovi alebo voči páru súradníc ``(x, y)``.
 Klávesnica
 ------------
 
-You probably noticed that we used the ``keyboard`` in the above code.
-If you'd like to know what keys are pressed on the keyboard, you can query the
-attributes of the ``keyboard`` builtin. If, say, the left arrow is held down,
-then ``keyboard.left`` will be ``True``, otherwise it will be ``False``.
+Určite ste si všimli, že sme v kódoch vyššie používali ``keyboard``.
+Ak by ste chceli vedieť, aké klávesy boli stlačené na klávesnici, môžete sa na
+ne dopytovať pomocou atribútov zabudovanej triedy ``keyboard``. Ak je napríklad
+podržaný kláves šípka vľavo, tak ``keyboard.left`` bude ``True``, 
+v opačnom prípade bude ``False``.
 
-There are attributes for every key; some examples::
+Atribút existuje pre každý kláves; niekoľko príkladov::
 
-    keyboard.a  # The 'A' key
-    keyboard.left  # The left arrow key
-    keyboard.rshift  # The right shift key
-    keyboard.kp0  # The '0' key on the keypad
-    keyboard.k_0  # The main '0' key
+    keyboard.a  # kláves 'A'
+    keyboard.left  # kláves ľavej šípky
+    keyboard.rshift  # kláves pravej šípky
+    keyboard.kp0  # kláves '0' na numerickej klávesnici
+    keyboard.k_0  # kláves '0' na hlavnej klávesnici
 
-The full set of key constants is given in the `Buttons and Keys`_
-documentation, but the attributes are lowercase, because these are variables
-not constants.
+Kompletný zoznam konštánt jednotlivých kláves nájdete v dokumentácii
+`Tlačidlá a klávesy`_, ale atribúty sú malými písmenami, pretože sa jedná o 
+premenné a nie konštanty.
 
 .. deprecated:: 1.1
 
-    Uppercase and prefixed attribute names (eg. ``keyboard.LEFT`` or
-    ``keyboard.K_a``) are now deprecated; use lowercase attribute names
-    instead.
+    Názvy atribútov s veľkými písmenami alebo s prefixom (napr. ``keyboard.LEFT`` 
+    alebo ``keyboard.K_a``) sú odteraz zastarané; používajte miesto nich názvy 
+    atribútov malými písmenami.
 
-.. _`Buttons and Keys`: hooks.html#buttons-and-keys
+.. _`Tlačidlá a klávesy`: hooks.html#buttons-and-keys
 
 .. versionadded:: 1.1
 
-    You can now also query the state of the keys using the keyboard constants
-    themselves::
+    Odteraz sa taktiež môžete dopytovať na stav kláves pomocou ich vlastných 
+    klávesových konštánt::
 
-        keyboard[keys.A]  # True if the 'A' key is pressed
-        keyboard[keys.SPACE]  # True if the space bar is pressed
+        keyboard[keys.A]  # True ak bol stlačený kláves 'A'
+        keyboard[keys.SPACE]  # True ak bol stlačený medzerník
 
 
-Animations
+Animácie
 ----------
 
 You can animate most things in pygame using the builtin ``animate()``. For
@@ -702,8 +703,8 @@ The ``animate()`` function returns an ``Animation`` instance:
         ``stop()`` is called. This function takes no arguments.
 
 
-Tone Generator
---------------
+Generátor tónov
+---------------
 
 .. versionadded:: 1.2
 
