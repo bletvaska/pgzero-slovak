@@ -139,17 +139,17 @@ funkcia ``update()`` sa použije na aktualizovanie pohybu mimozemšťana po obra
 Ošetrenie kliknutí
 ------------------
 
-Let's make the game do something when you click on the alien. To do this we
-need to define a function called :func:`on_mouse_down`. Add this to the source
-code::
+Teraz poďme zabezpečiť, aby hra urobila niečo po kliknutí na mimozemšťana. Aby sme 
+to mohli spraviť, potrebujeme zadefinovať funkciu s názvom :func:`on_mouse_down`. 
+Pridajte do kódu tieto riadky::
 
     def on_mouse_down(pos):
         if alien.collidepoint(pos):
-            print("Eek!")
+            print("Au!")
         else:
-            print("You missed me!")
+            print("Netrafil si!")
 
-You should run the game and try clicking on and off the alien.
+Spustite hru a skúste na mimozemšťana klikať.
 
 Pygame Zero is smart about how it calls your functions. If you don't define
 your function to take a ``pos`` parameter, Pygame Zero will call it without
@@ -157,13 +157,13 @@ a position. There's also a ``button`` parameter for ``on_mouse_down``. So we
 could have written::
 
     def on_mouse_down():
-        print("You clicked!")
+        print("Klikol si!")
 
 alebo::
 
     def on_mouse_down(pos, button):
         if button == mouse.LEFT and alien.collidepoint(pos):
-            print("Eek!")
+            print("Au!")
 
 
 
@@ -189,10 +189,10 @@ Váš projekt by mal teraz vyzerať takto:
     │   └── eep.wav
     └── intro.py
 
-``sounds/`` is the standard directory that Pygame Zero will look in to find
-your sound files.
+``sounds/`` je štandardný priečinok, v ktorom bude knižnica Pygame Zero hľadať
+vaše zvukové súbory.
 
-Now let's change the ``on_mouse_down`` function to use these new resources::
+Teraz zmeňme funkciu ``on_mouse_down`` tak, aby použila tieto nové zdroje::
 
     def on_mouse_down(pos):
         if alien.collidepoint(pos):
