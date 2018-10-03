@@ -113,28 +113,27 @@ Metóda ``alien.draw()`` vykreslí sprite na obrazovku na jeho aktuálnu pozíci
 Hýbeme s mimozemšťanom
 ----------------------
 
-Let's set the alien off-screen; change the ``alien.pos`` line to read::
+Let's set the alien off-screen; zmeňte riadok obsahujúci ``alien.pos`` na::
 
     alien.topright = 0, 10
 
-Note how you can assign to ``topright`` to move the alien actor by its
-top-right corner. If the right-hand edge of the alien is at ``0``, the the
-alien is just offscreen to the left.  Now let's make it move. Add the following
-code to the bottom of the file::
+Všimnite si, ako sa priradením hodnoty do ``topright`` zmení poloha mimozemšťana
+vzhľadom na jeho pravý horný roh. If the right-hand edge of the alien is at ``0``, the
+alien is just offscreen to the left. Teraz ho poďme rozpohybovať. Pridajte tieto 
+riadky na koniec súboru::
 
     def update():
         alien.left += 2
         if alien.left > WIDTH:
             alien.right = 0
 
-Pygame Zero will call your :func:`update` function once every frame. Moving the
-alien a small number of pixels every frame will cause it to slide across the
-screen. Once it slides off the right-hand side of the screen, we reset it back
-to the left.
+Pygame Zero zavolá vašu funkciu :func:`update` raz za každý snímok. Posunutím
+mimozemšťana o niekoľko pixelov počas každého snímku spôsobí, že sa bude po obrazovke presúvať.
+Keď dosiahne pravý okraj obrazovky, znovu ho spustíme od ľavého okraja.
 
-Your functions ``draw()`` and ``update()`` work in similar ways but are designed for two different purposes.
-The ``draw()`` function draws the current position of the alien while the ``update()`` function is used to show the alien
-moving on the screen.
+Vaše funkcie ``draw()`` a ``update()`` pracujú veľmi podobne, ale sú navrhnuté pre dva rozličné účely.
+Funkcia ``draw()`` zobrazí mimozemšťana na jeho aktuálnu pozíciu, zatiaľ čo
+funkcia ``update()`` sa použije na aktualizovanie pohybu mimozemšťana po obrazovke.
 
 
 Ošetrenie kliknutí
@@ -160,7 +159,7 @@ could have written::
     def on_mouse_down():
         print("You clicked!")
 
-or::
+alebo::
 
     def on_mouse_down(pos, button):
         if button == mouse.LEFT and alien.collidepoint(pos):
@@ -178,7 +177,7 @@ Now let's make the alien appear hurt. Save these files:
 * `eep.wav <_static/eep.wav>`_ - create a directory called ``sounds`` and save
   this as ``eep.wav`` in that directory.
 
-Your project should now look like this:
+Váš projekt by mal teraz vyzerať takto:
 
 .. code-block:: none
 
@@ -270,8 +269,8 @@ a float number to show this but feel free to use both to see the difference and 
 Zhrnutie
 -------
 
-We've seen how to load and draw sprites, play sounds, handle input events, and
-use the built-in clock.
+Ukázali sme si, ako nahrať a zobraziť sprity, prehrávať zvuky, ošetriť vstupné udalosti
+a ako sa používajú zabudované hodiny.
 
 You might like to expand the game to keep score, or make the alien move more
 erratically.
