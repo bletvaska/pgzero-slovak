@@ -151,15 +151,15 @@ Pridajte do kódu tieto riadky::
 
 Spustite hru a skúste na mimozemšťana klikať.
 
-Pygame Zero is smart about how it calls your functions. If you don't define
-your function to take a ``pos`` parameter, Pygame Zero will call it without
-a position. There's also a ``button`` parameter for ``on_mouse_down``. So we
-could have written::
+Knižnica Pygame Zero je pomerne chytrá čo sa týka volania vašich funkcií. Ak v
+definícii vašej funkcie nepoužijete parameter ``pos``, Pygame Zero ju bude volať
+bez pozície. Funkcia ``on_mouse_down`` taktiež obsahuje parameter ``button``.
+Takže ju môžete napísať takto::
 
     def on_mouse_down():
         print("Klikol si!")
 
-alebo::
+alebo takto::
 
     def on_mouse_down(pos, button):
         if button == mouse.LEFT and alien.collidepoint(pos):
@@ -170,12 +170,12 @@ alebo::
 Zvuky a obrázky
 -----------------
 
-Now let's make the alien appear hurt. Save these files:
+Teraz poďme zabezpečiť, aby mimozemšťan vyzeral zranene. Uložte si tieto súbory:
 
-* `alien_hurt.png <_static/alien_hurt.png>`_ - save this as ``alien_hurt.png``
-  in the ``images`` directory.
-* `eep.wav <_static/eep.wav>`_ - create a directory called ``sounds`` and save
-  this as ``eep.wav`` in that directory.
+* `alien_hurt.png <_static/alien_hurt.png>`_ - súbor uložte ako ``alien_hurt.png``
+  do priečinku ``images``.
+* `eep.wav <_static/eep.wav>`_ - vytvorte priečinok s názvom ``sounds`` a uložte 
+  do neho tento súbor ako ``eep.wav``.
 
 Váš projekt by mal teraz vyzerať takto:
 
@@ -199,19 +199,19 @@ Teraz zmeňme funkciu ``on_mouse_down`` tak, aby použila tieto nové zdroje::
             alien.image = 'alien_hurt'
             sounds.eep.play()
 
-Now when you click on the alien, you should hear a sound, and the sprite will
-change to an unhappy alien.
+Ak teraz kliknete na mimozemšťana, mali by ste počuť zvuk a sprite sa zmení
+na nešťastného mimozemšťana.
 
-There's a bug in this game though; the alien doesn't ever change back to a
-happy alien (but the sound will play on each click). Let's fix this next.
+V hre sa však nachádza chyba; mimozemšťan sa už nikdy nezmení späť na šťastného
+(zvuk sa však vždy po kliknutí prehrá). Túto chybu preto hneď opravíme.
 
 
 Clock
 -----
 
-If you're familiar with Python outside of games programming, you might know the
-``time.sleep()`` method that inserts a delay. You might be tempted to write
-code like this::
+Ak poznáte Python mimo programovania počítačových hier, určite poznáte metódu
+``time.sleep()``, ktorá pozastaví vykonávanie programu. To vás môže zvádzať k
+napísaniu takéhoto programu::
 
     def on_mouse_down(pos):
         if alien.collidepoint(pos):
@@ -220,17 +220,17 @@ code like this::
             time.sleep(1)
             alien.image = 'alien'
 
-Unfortunately, this is not at all suitable for use in a game. ``time.sleep()``
-blocks all activity; we want the game to go on running and animating. In fact
-we need to return from ``on_mouse_down``, and let the game work out when to
-reset the alien as part of its normal processing, all the while running your
-``draw()`` and ``update()`` methods.
+Žiaľ, tento prístup nie je vôbec vhodný pre použitie v počítačových hrách.
+Metóda ``time.sleep()`` blokuje všetky činnosti a my chceme, aby hra pokračovala
+v behu a veci sa hýbali. Vlastne sa len potrebujeme vrátiť z funkcie ``on_mouse_down``
+a nechať hru rozhodnúť, kedy resetuje mimozemšťana ako súčasť jej bežnej práce počas
+vykonávania vašich metód ``draw()`` a ``update()``.
 
-This is not difficult with Pygame Zero, because it has a built-in
-:class:`Clock` that can schedule functions to be called later.
+To je však nie je zložité vyriešiť s knižnicou Pygame Zero, pretože obsahuje 
+zabudovanú triedu class:`Clock`, ktorá umožňuje naplánovať spúšťanie funkcií na neskôr.
 
-First, let's "refactor" (ie. re-organise the code). We can create functions to
-set the alien as hurt and also to change it back to normal::
+Najprv "refaktorujme" (to znamená reorganizujme) kód. Môžeme vytvoriť funkcie, 
+ktoré nastavia mimozemšťana na zraneného a rovnako ho vrátia naspäť do normálu::
 
     def on_mouse_down(pos):
         if alien.collidepoint(pos):
@@ -245,9 +245,9 @@ set the alien as hurt and also to change it back to normal::
     def set_alien_normal():
         alien.image = 'alien'
 
-This is not going to do anything different yet. ``set_alien_normal()`` won't be
-called. But let's change ``set_alien_hurt()`` to use the clock, so that the
-``set_alien_normal()`` will be called a little while after. ::
+Zatiaľ však k žiadnej zmene nedôjde, pretože funkcia ``set_alien_normal()`` sa 
+nikde nevolá. Ale zmeňme funkciu ``set_alien_hurt()`` tak, aby používala objekt
+``clock``, takže funkcia ``set_alien_normal()`` sa bude volať o chvíľu neskôr.::
 
     def set_alien_hurt():
         alien.image = 'alien_hurt'
