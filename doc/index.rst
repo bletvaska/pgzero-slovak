@@ -66,8 +66,8 @@ for learners.
     stickers
 
 
-Improving Pygame Zero
----------------------
+Vylepšovanie knižnice Pygame Zero
+---------------------------------
 
 .. toctree::
     :maxdepth: 2

@@ -691,12 +691,15 @@ Funkcia ``animate()`` vrátiu inštanciu triedy ``Animation``:
 
     .. attribute:: running
 
-        This will be True if the animation is running. It will be False
-        when the duration has run or the ``stop()`` method was called before
-        then.
+        Bude mať hodnotu ``True``, ak je animácia spustená. A hodnotu ``False``,
+        ak uplynula alebo bola pred uplynutím zavolaná metóda ``stop()``.
 
     .. attribute:: on_finished
 
+        Tento atribút môžete nastaviť na funkciu, ktorá má byť zavolaná, keď
+        sa ukončí prehrávanie animácie. 
+        Nezavolá sa, ak bola zavolaná metóda ``stop()``. Táto funkcia nemá 
+        žiadne argumenty.
         You may set this attribute to a function which will be called
         when the animation duration runs out. The ``on_finished`` argument
         to ``animate()`` also sets this attribute. It is not called when
