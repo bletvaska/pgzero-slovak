@@ -86,11 +86,10 @@ draw images to the screen ("blit" them).
 Rect
 ----
 
-The `Pygame Rect`_ class is available as a built in. This can be used in a
-variety of ways, from detecting clicks within a region to drawing a box onto
-the screen:
+Trieda `Pygame Rect`_ je dostupná ako zabudovaná. Je možné ju použiť mnohými spôsobmi, 
+ako napríklad na detekciu kliknutí v oblasti ohraničenej práve obdĺžnikom:
 
-For example, you can draw a box with::
+Obdĺžnik nakreslíte napríklad takto::
 
     RED = 200, 0, 0
     BOX = Rect((20, 20), (100, 100))
