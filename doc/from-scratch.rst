@@ -1,8 +1,8 @@
 Prechod z nástroja Scratch
 ==========================
 
-This tutorial will compare an implementation of Flappy Bird written in Scratch
-with one written in Pygame Zero. The Scratch and Pygame Zero programs are
+Tento návod porovná implementáciu hry Flappy Bird napísanú v Scratch-i s 
+implementáciou v Pygame Zero. The Scratch and Pygame Zero programs are
 similar to a remarkable extent.
 
 The `Pygame Zero version`__ can be found in Pygame Zero repository.
@@ -36,8 +36,8 @@ This corresponds to the Pygame Zero code setting these objects up as
    pipe_top = Actor('top', anchor=('left', 'bottom'))
    pipe_bottom = Actor('bottom', anchor=('left', 'top'))
 
-In Pygame Zero we also have to ensure we draw these objects. In principle this
-gives a little more flexibility about how to draw the scene::
+V Pygame Zero je ešte potrebné zabezpečiť vykreslenie týchto objektov. To v
+princípe poskytuje viac flexibility v tom, ako vykresliť scénu::
 
    def draw():
        screen.blit('background', (0, 0))
@@ -46,15 +46,15 @@ gives a little more flexibility about how to draw the scene::
        bird.draw()
 
 
-Pipe movement
--------------
+Pohyb potrubia
+--------------
 
-The pipes move at a constant rate irrespective of the bird. When they move off
-the left-hand side of the screen, they loop around to the right, and their
-vertical position moves at random.
+Potrubie sa pohybuje konštantnou rýchlosťou bez ohľadu na vtáka. Keď zmizne z
+obrazovky na ľavej strane, znovu sa objaví na pravej strane, pričom jeho 
+vertikálna pozícia bude náhodná.
 
-In Scratch this can be achieved by creating two different scripts for the top
-and bottom pipe.
+V Scratch-i je to možné zabezpečiť dvoma rozličnými skriptami pre vrchné a 
+dolné potrubie.
 
 .. image:: _static/scratch/flappybird-top-start.png
 
@@ -208,14 +208,14 @@ pressed::
 Here, if the bird is not dead, we set its ``vy`` to a negative number: in
 Pygame Zero this means it starts moving upwards.
 
-You should be able to find a lot of parallels between the Python code and this
-Scratch code:
+Mali by ste byť schopní nájsť mnoho paralel medzi kódom v jazyku Python a 
+týmto kódom v Scratch-i:
 
 .. image:: _static/scratch/flappybird-bird-start.png
 .. image:: _static/scratch/flappybird-bird-space.png
 
 
-The biggest differences between Scratch and Pygame Zero are these:
+Najväčšie rozdiely medzi prostredím Scratch a Pygame Zero sú tieto:
 
 * You cannot loop forever in Pygame Zero - just update for one frame and then
   return.
@@ -258,12 +258,12 @@ Tu je niekoľko porovnaní:
 | ``pick random a to b``     | ``import random`` to load the ``random``   |
 |                            | module, then ``random.randint(a, b)``      |
 +----------------------------+--------------------------------------------+
-| (0, 0) is the centre of    | (0, 0) is the top-left of the window       |
+| (0, 0) is the centre of    | (0, 0) je ľavý horný roh okna              |
 | the stage                  |                                            |
 +----------------------------+--------------------------------------------+
 
-In some cases, the code is simpler in Python because it can be
-organised in a way that helps it make sense when you read it.
+V niektorých prípadoch je kód jednoduchší v jazyku Python, pretože môže byť
+organizovaný spôsobom, ktorý zvýši jeho čitateľnosť.
 
 The power of Pygame Zero's actors also makes the coordinate manipulation
 easier. We used the ``anchor`` position to position the pipes, and we were able
