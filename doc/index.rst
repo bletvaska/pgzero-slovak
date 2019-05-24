@@ -7,7 +7,7 @@
 Welcome to Pygame Zero
 ======================
 
-Pygame Zero je na tvorbu hier bez boilerplate.
+Pygame Zero je knižnica na rýchlu tvorbu hier.
 
 Knižnica je určená na použitie vo vzdelávaní, aby učitelia mohli vyučovať základy programovania bez nutnosti vysvetľovať Pygame API alebo písať hernú slučku.
 
