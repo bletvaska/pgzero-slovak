@@ -50,9 +50,8 @@ Spracovanie vstupu je trochu komplikovanejšie, ale Pygame Zero umožňuje jedno
 
 .. function:: update() alebo update(dt)
 
-    Called by Pygame Zero to step your game logic. This will be called repeatedly, 60 times a second.
-    Funkcia je volaná knižnicou Pygame Zero na vykonanie kroku hernej logiky 
-    vašej hry. Bude volaná opakovane 60 krát za sekundu.
+    Funkcia je volaná knižnicou Pygame Zero na vykonanie jedného kroku hernej 
+    logiky vašej hry. Bude volaná opakovane 60 krát za sekundu.
     
     Pri písaní tejto funkcie je možné použiť dva rozličné prístupy.
     
